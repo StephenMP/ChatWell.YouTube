@@ -1,7 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Stephen Porter</Authors>
+    <Company />
+    <Version>1.0.0</Version>
+    <Description>A .NET Standard client library for obtaining live chat messages for YouTube Live Streams.</Description>
+    <PackageLicenseUrl>https://github.com/StephenMP/ChatWell.YouTube/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/StephenMP/ChatWell.YouTube</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/StephenMP/ChatWell.YouTube</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

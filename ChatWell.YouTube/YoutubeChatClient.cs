@@ -31,7 +31,7 @@ namespace ChatWell.YouTube
     {
         private readonly IYouTubeAuthService youtubeAuthService;
         private Thread chatThread;
-        private bool disconnect = false;
+        private bool disconnect;
         private string liveChatId;
         private YouTubeService youtubeService;
 
