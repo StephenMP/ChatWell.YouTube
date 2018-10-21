@@ -1,0 +1,21 @@
+language: csharp
+solution: ChatWell.YouTube.sln
+dist: trusty
+mono: none
+dotnet: 2.1.300
+install:
+  - dotnet restore
+script:
+  - dotnet build -c Release
+  - dotnet test -c Release --no-build ChatWell.YouTube.Tests/ChatWell.YouTube.Tests.csproj -p:CollectCoverage=true -p:CoverletOutputFormat=opencover -p:Exclude="[ChatWell.YouTube.Tests*]*"
+  - curl -s https://codecov.io/bash > codecov
+  - chmod +x codecov
+  - ./codecov -f ./SLOBSharp.Tests/coverage.opencover.xml
+# deploy:
+#   skip_cleanup: true
+#   provider: script
+#   script: dotnet nuget push ./SLOBSharp/bin/Release/*.nupkg -k $NUGET_API_KEY -s https://api.nuget.org/v3/index.json
+#   on:
+#     branch: release
+notifications:
+  email: false
